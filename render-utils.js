@@ -24,5 +24,8 @@ export function renderAlbums(album) {
     a.append(div);
 
     return a;
+}
 
+export function renderAlbum(album) {
+    console.log(album);
 }

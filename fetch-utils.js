@@ -11,6 +11,13 @@ export async function getAlbums() {
     return checkError(response);
 }
 
+export async function getAlbum(id) {
+
+    const response = await client.from(`Fourtet Albums`).select(`*`).eq('id', id).single();
+
+    return checkError(response);
+}
+
 
 function checkError({ data, error }) {
     return error ? console.error(error) : data;

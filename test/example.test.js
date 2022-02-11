@@ -16,3 +16,17 @@ test('time to test a function', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+test('time to test a function', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = `<div class="album" id="album"><h2>Morning / Evening</h2><h4>2015</h4><img src="/assets/1.jpg"><ol><li>Morning Side</li><li>Evening Side</li></ol></div>`;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = true;
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
