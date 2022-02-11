@@ -27,5 +27,23 @@ export function renderAlbums(album) {
 }
 
 export function renderAlbum(album) {
-    console.log(album);
+// console.log(album);   
+    const div = document.createElement('div');
+    const albumName = document.createElement('h2');
+    const year = document.createElement('h4');
+    const albumArt = document.createElement('img');
+    const ol = document.createElement('ol');
+
+    albumName.textContent = album.AlbumName;
+    year.textContent = album.YearReleased;
+    albumArt.src = `/assets/${album.id}.jpg`;
+
+    for (let track of (album.Tracks.split(','))) {
+        const li = document.createElement('li');
+        li.textContent = track.replace('[', '').replace(']', '').replace(`'`, '').replace(`'`, '');
+        ol.append(li);
+    }
+    div.append(albumName, year, albumArt, ol);
+    return div;
+
 }
