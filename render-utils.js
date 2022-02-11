@@ -7,6 +7,7 @@ export function renderAlbums(album) {
     const img = document.createElement('img');
     const p = document.createElement('p');
     const a = document.createElement('a');
+    div.classList.add('album');
 
     // alright, now that we have our elements created, its time to see if our data is passing to us through our function's argument (cd). let's console log a key to see if we can get it's value.
     // console.log(album.id);

@@ -1,24 +1,24 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 
-import { fourtetAlbums } from '../fourtet.js';
+// import { fourtetAlbums } from '../fourtet.js';
 import { renderAlbum, renderAlbums } from '../render-utils.js';
 
 const test = QUnit.test;
 
-// test('renderAlbums should render an album as a div with a class of album', (expect) => {
-//     //Arrange
-//     // Set up your arguments and expectations
-//     const expected = '<div class="album"><h3>Morning / Evening</h3><img src="assets/1.jpg" class="Album-art"><p>2015, 2 tracks</p></div>';
+test('renderAlbums should render an album as a div with a class of album', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = '<a href="/Album/?id=1"><h3>Morning / Evening</h3><img src="/assets/1.jpg"><p>2015, 2 tracks</p></a>';
     
-//     //Act 
-//     // Call the function you're testing and set the result to a const
-//     const actual = renderAlbums(fourtetAlbums[0]);
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = renderAlbums({ id: 1, AlbumName: 'Morning / Evening', YearReleased: '2015', Tracks:['Morning Side', 'Evening Side'] });
 
-//     //Expect
-//     // Make assertions about what is expected versus the actual result
-//     expect.equal(actual.outerHTML, expected);
-// });
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});
 
 test('renderAlbum should render an album as a div', (expect) => {
     //Arrange
