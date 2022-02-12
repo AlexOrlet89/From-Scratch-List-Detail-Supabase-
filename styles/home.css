@@ -58,9 +58,10 @@ a img:hover {
 
 h2 {
     background-color: rgba(240, 248, 255, 0.561);
-    padding-top: 2%;
+    margin-top: 2%;
     text-align: center;
     font-size: xx-large;
+    font-weight: 500;
 }
 .banner {
 
