@@ -1,1 +1,68 @@
 /* add home page styles here */
+* {
+    box-sizing: border-box;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+
+
+body {
+    background-image: url(/assets/birdsong.jpg);
+    height: 80vh;
+}
+
+#Main-list {
+    display: flex;
+    flex-direction: row;
+
+    /* min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    justify-items: center; */
+}
+
+a {
+    /* display: inline-block; */
+    width: 75%;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    background-blend-mode: lighten;
+    background-blend-mode: lighten;
+    
+}
+
+h3 {
+    text-align: center;
+    font-size: large;
+    background-color: rgba(240, 248, 255, 0.561);
+    /* width: fit-content; */
+    /* -webkit-text-stroke: 5px; */
+}
+a :hover {
+    font-size: large;
+    -webkit-text-stroke: 5px;
+}
+
+p {
+    background-color: rgba(240, 248, 255, 0.561);
+}
+
+a img {
+    width: 100%;
+}
+a img:hover {
+    background-blend-mode: lighten;
+    width: 100%;
+}
+
+h2 {
+    background-color: rgba(240, 248, 255, 0.561);
+    padding-top: 2%;
+    text-align: center;
+    font-size: xx-large;
+}
+.banner {
+
+}
+
