@@ -36,12 +36,12 @@ export function renderAlbum(album) {
     const year = document.createElement('h4');
     const albumArt = document.createElement('img');
     const ol = document.createElement('ol');
-    const title = document.querySelector('title');
+    // const title = document.querySelector('title');
 
     div.classList.add('album');
     div.id = 'album';
 
-    title.textContent = album.AlbumName;
+    // title.textContent = album.AlbumName;
     albumName.textContent = album.AlbumName;
     year.textContent = album.YearReleased;
     albumArt.src = `/assets/${album.id}.jpg`;

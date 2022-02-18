@@ -28,7 +28,7 @@ test('renderAlbum should render an album as a div', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = renderAlbum({ id: 1, AlbumName: 'Morning / Evening', YearReleased: '2015', Tracks:['Morning Side', 'Evening Side'] });
-    console.log('dog');
+    console.log(actual.outerHTML);
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
