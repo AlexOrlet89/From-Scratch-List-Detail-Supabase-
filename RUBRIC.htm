@@ -1,0 +1,161 @@
+<!-- <!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>List / Detail From Scratch w/ Supabase | web-list-detail-supabase</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="List / Detail From Scratch w/ Supabase" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="List / detail from scratch using supabase" />
+<meta property="og:description" content="List / detail from scratch using supabase" />
+<link rel="canonical" href="https://alchemycodelab.github.io/web-list-detail-supabase/" />
+<meta property="og:url" content="https://alchemycodelab.github.io/web-list-detail-supabase/" />
+<meta property="og:site_name" content="web-list-detail-supabase" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="List / Detail From Scratch w/ Supabase" />
+<script type="application/ld+json">
+{"description":"List / detail from scratch using supabase","url":"https://alchemycodelab.github.io/web-list-detail-supabase/","@type":"WebSite","name":"web-list-detail-supabase","headline":"List / Detail From Scratch w/ Supabase","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/web-list-detail-supabase/assets/css/style.css?v=d30cf2645be119d52d6b447baed0672bedc99e8a">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/web-list-detail-supabase/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+ <!--  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://alchemycodelab.github.io/web-list-detail-supabase/">web-list-detail-supabase</a></h1>
+      
+
+      <h1 id="list--detail-from-scratch-w-supabase">List / Detail From Scratch w/ Supabase</h1>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Use <a href="https://github.com/alchemycodelab/web-template">this template</a> to get started.</p>
+
+<h3 id="learning-objectives">Learning Objectives</h3>
+
+<ul>
+  <li>Render a list of items with a link to a detail page (list / detail pattern)</li>
+  for of loops, functions that return divs
+  
+  <li>Use URLSearchParams to get additional data about a web page</li>
+const params = newURLSearchParams(window.location.            search);
+
+  <li>Use a function to filter an item from a list of data using an identifier</li>
+<li>Use a Supabase database to store data</li>
+  <li>Use the Supabase javascript library to retrieve a list of items from a database</li>
+  <li>Use the Supabase javascript library to retrieve a single item from a database</li>
+</ul>
+
+<h3 id="description">Description</h3>
+
+<p>Use a <em>different</em> list from your spotlight topic last week and create a web application using the list / detail pattern. This time, your data should live in Supabase. Your app should consist of two pages – the home page which lists out all your items, and a detail page which uses URLSearchParams to render an individual item. You should also use this deliverable to practice CSS and add some fun styling to the page.</p>
+
+<h3 id="acceptance-criteria">Acceptance Criteria</h3>
+
+<ul>
+  <li>Users should see a list of items on the home page</li>
+  <li>Users should be able to click on each item on the home page and be taken to a detail page</li>
+  <li>The detail page should use URLSearchParams to load an individual item</li>
+</ul>
+
+<h3 id="rubric">Rubric</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>** Deploy Requirements **</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Main branch deployed to Netlify</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Open PR from <code class="language-plaintext highlighter-rouge">dev</code> branch with Netlify deploy preview</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Events</th>
+      <th style="text-align: right"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">On load on the home page, see a list of <code class="language-plaintext highlighter-rouge">&lt;thing&gt;</code>s, fetched from supabase</td>
+      <td style="text-align: right">4</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">On clicking a <code class="language-plaintext highlighter-rouge">&lt;thing&gt;</code>, user should be taken to that <code class="language-plaintext highlighter-rouge">&lt;thing&gt;</code>’s detail page.</td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Detail page should get the id from the URL and use that id to fetch that <code class="language-plaintext highlighter-rouge">&lt;thing&gt;</code> from supabase.</td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Detail page should show the user details about the <code class="language-plaintext highlighter-rouge">&lt;thing&gt;</code> with more details than on the list page</td>
+      <td style="text-align: right">2</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Functions</th>
+      <th style="text-align: right"> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">PURE: <code class="language-plaintext highlighter-rouge">render&lt;Thing&gt;</code> : return DOM node</td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PURE: <code class="language-plaintext highlighter-rouge">render&lt;ThingDetail&gt;</code> : return DOM node</td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ASYNC: <code class="language-plaintext highlighter-rouge">fetch&lt;Things&gt;()</code> : return array of <code class="language-plaintext highlighter-rouge">&lt;thing&gt;</code>s from supabase</td>
+      <td style="text-align: right">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ASYNC: <code class="language-plaintext highlighter-rouge">fetch&lt;Thing&gt;(id)</code> : return single <code class="language-plaintext highlighter-rouge">&lt;thing&gt;</code> from supabase</td>
+      <td style="text-align: right">2</td>
+    </tr>
+  </tbody>
+</table>
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html> -->
